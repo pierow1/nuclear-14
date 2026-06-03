@@ -1,0 +1,74 @@
+- type: entity
+  name: Urist McFatfuck
+  parent: MobHuman
+  id: BaseMobHumanFat
+  abstract: true
+  components:
+  - type: Hunger
+  - type: Icon
+    sprite: _Misfits/Mobs/Species/Fat/parts.rsi
+    state: full
+  - type: Thirst
+  - type: Butcherable
+    butcheringType: Spike
+    spawned:
+    - id: FoodMeatHuman
+      amount: 10
+  - type: HumanoidAppearance
+    species: HumanFat
+    hideLayersOnEquip:
+    - Hair
+    - Snout
+    - FacialHair
+  - type: Inventory
+    speciesId: fat
+    displacements:
+      mask:
+        layer:
+          sprite: _Misfits/Mobs/Species/Fat/displacement.rsi
+          state: mask
+          copyToShaderParameters:
+            layerKey: dummy
+            parameterTexture: displacementMap
+            parameterUV: displacementUV
+      neck:
+        layer:
+          sprite: _Misfits/Mobs/Species/Fat/displacement.rsi
+          state: neck
+          copyToShaderParameters:
+            layerKey: dummy
+            parameterTexture: displacementMap
+            parameterUV: displacementUV
+      gloves:
+        layer:
+          sprite: _Misfits/Mobs/Species/Fat/displacement.rsi
+          state: hand
+          copyToShaderParameters:
+            layerKey: dummy
+            parameterTexture: displacementMap
+            parameterUV: displacementUV
+      jumpsuit:
+        layer:
+          sprite: _Misfits/Mobs/Species/Fat/displacement.rsi
+          state: jumpsuit
+          copyToShaderParameters:
+            layerKey: dummy
+            parameterTexture: displacementMap
+            parameterUV: displacementUV
+      outerClothing:
+        layer:
+          sprite: _Misfits/Mobs/Species/Fat/displacement.rsi
+          state: outerClothing
+          copyToShaderParameters:
+            layerKey: dummy
+            parameterTexture: displacementMap
+            parameterUV: displacementUV
+
+
+- type: entity
+  parent: BaseSpeciesDummy
+  id: MobHumanFatDummy
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HumanoidAppearance
+    species: HumanFat
